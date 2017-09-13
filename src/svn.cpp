@@ -573,7 +573,7 @@ int SvnRevision::fetchRevProps()
     epoch = svndate ? get_epoch(svndate->data) : 0;
     if (authorident.isEmpty()) {
         if (!svnauthor || svn_string_isempty(svnauthor))
-            authorident = "nobody <nobody@localhost>";
+            authorident = "The ReactOS Team <ros-dev@reactos.org>";
         else
             authorident = svnauthor->data + QByteArray(" <") + svnauthor->data +
                 QByteArray("@") + userdomain.toUtf8() + QByteArray(">");
